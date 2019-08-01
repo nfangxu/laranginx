@@ -259,9 +259,9 @@ ADD scripts/init.sh /init.sh
 RUN chmod 755 /init.sh
 
 # copy in code
-ADD src/ /var/www/html/
+ADD src/ /var/www/html/public/
 
 EXPOSE 443 80
 
 WORKDIR "/var/www/html"
-CMD ["/start.sh"]
+CMD ["/init.sh"]
